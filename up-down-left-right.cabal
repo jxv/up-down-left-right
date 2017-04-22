@@ -1,0 +1,62 @@
+-- This file has been generated from package.yaml by hpack version 0.17.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           up-down-left-right
+version:        0.0.0
+synopsis:       A new Haskeleton package.
+description:    up-down-left-right is a new Haskeleton package.
+category:       Other
+maintainer:     Author name here
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    package.yaml
+    README.md
+    stack.yaml
+
+data-files:
+    data/chrono.bmp
+
+library
+  hs-source-dirs:
+      library
+  default-extensions: NoImplicitPrelude ConstraintKinds DeriveGeneric DuplicateRecordFields FlexibleContexts FlexibleInstances GADTs GeneralizedNewtypeDeriving KindSignatures LambdaCase MultiParamTypeClasses NamedFieldPuns OverloadedStrings RankNTypes ScopedTypeVariables TypeApplications TypeOperators
+  ghc-options: -Wall
+  build-depends:
+      pregame
+    , base
+    , sdl2
+  exposed-modules:
+      UDLR.Main
+  other-modules:
+      Paths_up_down_left_right
+  default-language: Haskell2010
+
+executable up-down-left-right
+  main-is: Main.hs
+  hs-source-dirs:
+      executable
+  default-extensions: NoImplicitPrelude ConstraintKinds DeriveGeneric DuplicateRecordFields FlexibleContexts FlexibleInstances GADTs GeneralizedNewtypeDeriving KindSignatures LambdaCase MultiParamTypeClasses NamedFieldPuns OverloadedStrings RankNTypes ScopedTypeVariables TypeApplications TypeOperators
+  ghc-options: -Wall -rtsopts -threaded -with-rtsopts=-N
+  build-depends:
+      base
+    , up-down-left-right
+  default-language: Haskell2010
+
+test-suite up-down-left-right-test-suite
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  hs-source-dirs:
+      test-suite
+  default-extensions: NoImplicitPrelude ConstraintKinds DeriveGeneric DuplicateRecordFields FlexibleContexts FlexibleInstances GADTs GeneralizedNewtypeDeriving KindSignatures LambdaCase MultiParamTypeClasses NamedFieldPuns OverloadedStrings RankNTypes ScopedTypeVariables TypeApplications TypeOperators
+  ghc-options: -Wall -rtsopts -threaded -with-rtsopts=-N
+  build-depends:
+      base
+    , sdl2
+    , up-down-left-right
+    , fixie
+    , hspec
+  default-language: Haskell2010

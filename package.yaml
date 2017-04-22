@@ -1,0 +1,64 @@
+name: up-down-left-right
+version: '0.0.0'
+category: Other
+synopsis: A new Haskeleton package.
+description: up-down-left-right is a new Haskeleton package.
+maintainer: Author name here
+extra-source-files:
+- package.yaml
+- README.md
+- stack.yaml
+data-files:
+- data/chrono.bmp 
+ghc-options: -Wall
+default-extensions:
+- NoImplicitPrelude
+- ConstraintKinds
+- DeriveGeneric
+- DuplicateRecordFields
+- FlexibleContexts
+- FlexibleInstances
+- GADTs
+- GeneralizedNewtypeDeriving
+- KindSignatures
+- LambdaCase
+- MultiParamTypeClasses
+- NamedFieldPuns
+- OverloadedStrings
+- RankNTypes
+- ScopedTypeVariables
+- TypeApplications
+- TypeOperators
+library:
+  dependencies:
+  - pregame
+  - base
+  - sdl2
+  source-dirs: library
+  other-modules:
+    Paths_up_down_left_right
+executables:
+  up-down-left-right:
+    dependencies:
+    - base
+    - up-down-left-right
+    ghc-options:
+    - -rtsopts
+    - -threaded
+    - -with-rtsopts=-N
+    main: Main.hs
+    source-dirs: executable
+tests:
+  up-down-left-right-test-suite:
+    dependencies:
+    - base
+    - sdl2
+    - up-down-left-right
+    - fixie
+    - hspec
+    ghc-options:
+    - -rtsopts
+    - -threaded
+    - -with-rtsopts=-N
+    main: Main.hs
+    source-dirs: test-suite
