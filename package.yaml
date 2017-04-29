@@ -12,7 +12,6 @@ data-files:
 - data/chrono.bmp 
 ghc-options: -Wall
 default-extensions:
-- NoImplicitPrelude
 - ConstraintKinds
 - DeriveGeneric
 - DuplicateRecordFields
@@ -31,9 +30,9 @@ default-extensions:
 - TypeOperators
 library:
   dependencies:
-  - pregame
   - base
   - sdl2
+  - animate
   source-dirs: library
   other-modules:
     Paths_up_down_left_right

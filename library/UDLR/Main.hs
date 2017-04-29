@@ -1,9 +1,9 @@
 module UDLR.Main where
 
-import Pregame
 import Control.Concurrent (threadDelay)
 import SDL.Vect
 import qualified SDL
+import Foreign.C.Types (CInt)
 
 import Paths_up_down_left_right (getDataFileName)
 

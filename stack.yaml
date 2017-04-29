@@ -4,5 +4,6 @@ packages:
 extra-deps:
 - fixie-1.0.0
 - pregame-1.0.3.0
+- animate-0.0.0
 flags: {}
 extra-package-dbs: []

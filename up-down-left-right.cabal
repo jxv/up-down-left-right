@@ -23,12 +23,12 @@ data-files:
 library
   hs-source-dirs:
       library
-  default-extensions: NoImplicitPrelude ConstraintKinds DeriveGeneric DuplicateRecordFields FlexibleContexts FlexibleInstances GADTs GeneralizedNewtypeDeriving KindSignatures LambdaCase MultiParamTypeClasses NamedFieldPuns OverloadedStrings RankNTypes ScopedTypeVariables TypeApplications TypeOperators
+  default-extensions: ConstraintKinds DeriveGeneric DuplicateRecordFields FlexibleContexts FlexibleInstances GADTs GeneralizedNewtypeDeriving KindSignatures LambdaCase MultiParamTypeClasses NamedFieldPuns OverloadedStrings RankNTypes ScopedTypeVariables TypeApplications TypeOperators
   ghc-options: -Wall
   build-depends:
-      pregame
-    , base
+      base
     , sdl2
+    , animate
   exposed-modules:
       UDLR.Main
   other-modules:
@@ -39,7 +39,7 @@ executable up-down-left-right
   main-is: Main.hs
   hs-source-dirs:
       executable
-  default-extensions: NoImplicitPrelude ConstraintKinds DeriveGeneric DuplicateRecordFields FlexibleContexts FlexibleInstances GADTs GeneralizedNewtypeDeriving KindSignatures LambdaCase MultiParamTypeClasses NamedFieldPuns OverloadedStrings RankNTypes ScopedTypeVariables TypeApplications TypeOperators
+  default-extensions: ConstraintKinds DeriveGeneric DuplicateRecordFields FlexibleContexts FlexibleInstances GADTs GeneralizedNewtypeDeriving KindSignatures LambdaCase MultiParamTypeClasses NamedFieldPuns OverloadedStrings RankNTypes ScopedTypeVariables TypeApplications TypeOperators
   ghc-options: -Wall -rtsopts -threaded -with-rtsopts=-N
   build-depends:
       base
@@ -51,7 +51,7 @@ test-suite up-down-left-right-test-suite
   main-is: Main.hs
   hs-source-dirs:
       test-suite
-  default-extensions: NoImplicitPrelude ConstraintKinds DeriveGeneric DuplicateRecordFields FlexibleContexts FlexibleInstances GADTs GeneralizedNewtypeDeriving KindSignatures LambdaCase MultiParamTypeClasses NamedFieldPuns OverloadedStrings RankNTypes ScopedTypeVariables TypeApplications TypeOperators
+  default-extensions: ConstraintKinds DeriveGeneric DuplicateRecordFields FlexibleContexts FlexibleInstances GADTs GeneralizedNewtypeDeriving KindSignatures LambdaCase MultiParamTypeClasses NamedFieldPuns OverloadedStrings RankNTypes ScopedTypeVariables TypeApplications TypeOperators
   ghc-options: -Wall -rtsopts -threaded -with-rtsopts=-N
   build-depends:
       base
